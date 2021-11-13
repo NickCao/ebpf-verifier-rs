@@ -5,4 +5,5 @@ fn main() {
         .compile("verifier");
     println!("cargo:rerun-if-changed=src/lib.rs");
     println!("cargo:rerun-if-changed=src/verifier.hpp");
+    println!("cargo:rustc-link-lib=ebpfverifier");
 }
