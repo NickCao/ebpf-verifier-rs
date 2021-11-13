@@ -8,6 +8,7 @@ autocxx::include_cpp!(
 mod test {
     #[test]
     fn test() {
-        println!("{:?}", crate::ffi::verify("tests/demo.elf", ".text"));
+        assert!(crate::ffi::verify("tests/demo.o", ".text"));
+        assert!(!crate::ffi::verify("tests/loop.o", ".text"));
     }
 }
