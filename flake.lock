@@ -12,11 +12,11 @@
         "radix_tree": "radix_tree"
       },
       "locked": {
-        "lastModified": 1636771826,
-        "narHash": "sha256-7YaKgE5B8EKmjNToLPY6vvtwG7q/hq7pSkV48iD0hps=",
+        "lastModified": 1636772531,
+        "narHash": "sha256-qxl5YDVjUeYhOLZjSOWG3/dfsF9NVrTDtE3H1isIn70=",
         "owner": "NickCao",
         "repo": "ebpf-verifier",
-        "rev": "c706678bcdb51a5f0a7a2477f43df6c90f3c8052",
+        "rev": "1f10f26ad0dcc32188a2355662d04ad784898594",
         "type": "github"
       },
       "original": {

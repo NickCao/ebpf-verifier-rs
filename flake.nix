@@ -25,11 +25,15 @@
         {
           devShell = pkgs.mkShell {
             LIBCLANG_PATH = "${pkgs.llvmPackages.libclang.lib}/lib";
+            AUTOCXX_INC = "${ebpf-verifier.packages.${system}.ebpf-verifier}/include/src";
+            NIX_CFLAGS_COMPILE = "-std=c++17";
             buildInputs = with pkgs; [
               (rust-bin.selectLatestNightlyWith (toolchain:
                 toolchain.default.override {
                   extensions = [ "rust-analyzer-preview" ];
                 }))
+              clang
+              boost
             ];
           };
         }
