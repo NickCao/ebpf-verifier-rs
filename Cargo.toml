@@ -4,8 +4,7 @@ version = "0.1.0"
 edition = "2018"
 
 [dependencies]
-autocxx = "0.13.1"
-cxx = "1"
+cxx = { version = "1.0.58", default-features = false, features = ["alloc"] }
 
 [build-dependencies]
-autocxx-build = "0.13.1"
+cxx-build = "1.0.58"

@@ -1,8 +1,12 @@
-autocxx::include_cpp!(
-   #include "verifier.hpp"
-   generate!("verify")
-   safety!(unsafe)
-);
+#![no_std]
+
+#[cxx::bridge]
+mod ffi {
+    unsafe extern "C++" {
+        include!("ebpf-verifier-rs/src/verifier.hpp");
+        fn verify(filename: &str, section: &str) -> bool;
+    }
+}
 
 #[cfg(test)]
 mod test {
