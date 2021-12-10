@@ -1,7 +1,7 @@
 #![no_std]
 
 #[cxx::bridge]
-mod ffi {
+pub mod ffi {
     unsafe extern "C++" {
         include!("ebpf-verifier-rs/src/verifier.hpp");
         fn verify(filename: &str, section: &str) -> bool;
